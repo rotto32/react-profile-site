@@ -24823,6 +24823,10 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Profile = __webpack_require__(/*! ./Profile.jsx */ "./public/src/components/Profile.jsx");
+
+var _Profile2 = _interopRequireDefault(_Profile);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24837,19 +24841,62 @@ var App = function (_React$Component) {
   function App(props) {
     _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+    _this.state = {
+      content: 'profile-btn'
+    };
+
+    _this.clickHandler = _this.clickHandler.bind(_this);
+    return _this;
   }
 
   _createClass(App, [{
-    key: "render",
+    key: 'clickHandler',
+    value: function clickHandler(e) {
+      e.preventDefault();
+      this.setState({
+        content: e.target.id
+      });
+    }
+  }, {
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "dash" },
+        'div',
+        { className: 'page' },
         _react2.default.createElement(
-          "h1",
+          'div',
+          { className: 'hero' },
+          _react2.default.createElement(
+            'h1',
+            null,
+            'Rachael Otto'
+          ),
+          _react2.default.createElement(
+            'h3',
+            null,
+            'Full Stack Software Engineer'
+          )
+        ),
+        _react2.default.createElement(
+          'nav',
           null,
-          "Hello"
+          _react2.default.createElement(
+            'button',
+            { onClick: this.clickHandler, className: 'nav-btn', id: 'profile-btn' },
+            'About Me'
+          ),
+          _react2.default.createElement(
+            'button',
+            { onClick: this.clickHandler, className: 'nav-btn', id: 'project-btn' },
+            'Previous Work'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'content' },
+          _react2.default.createElement(_Profile2.default, null)
         )
       );
     }
@@ -24859,6 +24906,59 @@ var App = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = App;
+
+/***/ }),
+
+/***/ "./public/src/components/Profile.jsx":
+/*!*******************************************!*\
+  !*** ./public/src/components/Profile.jsx ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Profile = function (_React$Component) {
+  _inherits(Profile, _React$Component);
+
+  function Profile(props) {
+    _classCallCheck(this, Profile);
+
+    return _possibleConstructorReturn(this, (Profile.__proto__ || Object.getPrototypeOf(Profile)).call(this, props));
+  }
+
+  _createClass(Profile, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement("div", null);
+    }
+  }]);
+
+  return Profile;
+}(_react2.default.Component);
+
+;
+
+exports.default = Profile;
 
 /***/ }),
 
