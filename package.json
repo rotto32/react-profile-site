@@ -4,16 +4,37 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --watch --mode development"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rotto32/react-profile-site.git"
   },
-  "author": "",
+  "author": "Rachael Otto",
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/rotto32/react-profile-site/issues"
   },
-  "homepage": "https://github.com/rotto32/react-profile-site#readme"
+  "homepage": "https://github.com/rotto32/react-profile-site#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "prop-types": "^15.7.2",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
 }
