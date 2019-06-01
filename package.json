@@ -1,0 +1,19 @@
+{
+  "name": "react-profile-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rotto32/react-profile-site.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/rotto32/react-profile-site/issues"
+  },
+  "homepage": "https://github.com/rotto32/react-profile-site#readme"
+}
