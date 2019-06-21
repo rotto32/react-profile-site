@@ -24823,9 +24823,9 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Profile = __webpack_require__(/*! ./Profile.jsx */ "./public/src/components/Profile.jsx");
+var _Page = __webpack_require__(/*! ./Page.jsx */ "./public/src/components/Page.jsx");
 
-var _Profile2 = _interopRequireDefault(_Profile);
+var _Page2 = _interopRequireDefault(_Page);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24855,6 +24855,15 @@ var App = function (_React$Component) {
     key: 'clickHandler',
     value: function clickHandler(e) {
       e.preventDefault();
+      this.setState({
+        content: e.target.id
+      });
+      this.clickHandler = this.clickHandler.bind(this);
+    }
+  }, {
+    key: 'clickHandler',
+    value: function clickHandler(e) {
+      console.log(e.target.id);
       this.setState({
         content: e.target.id
       });
@@ -24896,7 +24905,7 @@ var App = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'content' },
-          _react2.default.createElement(_Profile2.default, null)
+          _react2.default.createElement(_Page2.default, { type: this.state.content })
         )
       );
     }
@@ -24909,10 +24918,10 @@ exports.default = App;
 
 /***/ }),
 
-/***/ "./public/src/components/Profile.jsx":
-/*!*******************************************!*\
-  !*** ./public/src/components/Profile.jsx ***!
-  \*******************************************/
+/***/ "./public/src/components/Page.jsx":
+/*!****************************************!*\
+  !*** ./public/src/components/Page.jsx ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24937,28 +24946,50 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Profile = function (_React$Component) {
-  _inherits(Profile, _React$Component);
+var Page = function (_React$Component) {
+  _inherits(Page, _React$Component);
 
-  function Profile(props) {
-    _classCallCheck(this, Profile);
+  function Page(props) {
+    _classCallCheck(this, Page);
 
-    return _possibleConstructorReturn(this, (Profile.__proto__ || Object.getPrototypeOf(Profile)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Page.__proto__ || Object.getPrototypeOf(Page)).call(this, props));
+
+    _this.state = {};
+    return _this;
   }
 
-  _createClass(Profile, [{
+  _createClass(Page, [{
     key: "render",
     value: function render() {
-      return _react2.default.createElement("div", null);
+      //   if (this.props.type === 'profile-btn') {
+      //     return (
+      //       <div>
+      //         <h2>profile</h2>
+      //       </div>
+      //     );
+      //   } else if (this.props.type === 'projects-btn') {
+      //     return (
+      //       <div>
+      //         <h2>projects</h2>
+      //       </div>
+      //     );
+      //   }
+      // }
+      // if (true) {
+      //   return (
+      //     <div>
+      //       {this.props.type}
+      //     </div>
+      //   )
+      // } 
+
     }
   }]);
 
-  return Profile;
+  return Page;
 }(_react2.default.Component);
 
-;
-
-exports.default = Profile;
+exports.default = Page;
 
 /***/ }),
 

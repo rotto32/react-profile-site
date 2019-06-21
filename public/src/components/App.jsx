@@ -1,5 +1,5 @@
 import React from "react";
-import Profile from './Profile.jsx';
+import Page from './Page.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,8 +16,15 @@ class App extends React.Component {
     e.preventDefault();
     this.setState({
       content: e.target.id
-    })
+    });
+    this.clickHandler = this.clickHandler.bind(this);
+  }
 
+  clickHandler (e) {
+    console.log(e.target.id);
+    this.setState({
+      content: e.target.id
+    });
   }
 
   render() {
@@ -33,9 +40,8 @@ class App extends React.Component {
           <button onClick={this.clickHandler} className="nav-btn" id='project-btn'>Previous Work</button>
         </nav>
 
-        <div className='content'>
-          <Profile/>
-          
+        <div className="content">
+          <Page type={this.state.content} />
         </div>
       </div>
     );
