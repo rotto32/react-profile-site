@@ -1,6 +1,6 @@
 import React from "react";
 
-class Projects extends React.Component {
+class Skills extends React.Component {
   constructor(props) {
     super(props);
 
@@ -10,10 +10,10 @@ class Projects extends React.Component {
   render() {
     return (
       <div>
-        <h3>Projects</h3>
+        <h3>Skills</h3>
       </div>
     );
   }
 }
 
-export default Projects;
+export default Skills;

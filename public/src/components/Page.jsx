@@ -1,4 +1,8 @@
 import React from "react";
+import Profile from './Profile.jsx';
+import Projects from './Projects.jsx';
+import Skills from './Skills.jsx';
+import Contact from './Contact.jsx';
 
 class Page extends React.Component {
   constructor(props) {
@@ -8,28 +12,36 @@ class Page extends React.Component {
   }
 
   render() {
-  //   if (this.props.type === 'profile-btn') {
-  //     return (
-  //       <div>
-  //         <h2>profile</h2>
-  //       </div>
-  //     );
-  //   } else if (this.props.type === 'projects-btn') {
-  //     return (
-  //       <div>
-  //         <h2>projects</h2>
-  //       </div>
-  //     );
-  //   }
-  // }
-  // if (true) {
-  //   return (
-  //     <div>
-  //       {this.props.type}
-  //     </div>
-  //   )
-  // } 
-  
+    if (this.props.type === 'profile-btn') {
+      return (
+        <div>
+          <Profile />
+        </div>
+      );
+    }
+    if (this.props.type === 'project-btn') {
+      return (
+        <div>
+          <Projects />
+        </div>
+      );
+    } 
+    
+    if (this.props.type === 'skills-btn') {
+      return (
+        <div>
+          <Skills />
+        </div>
+      );
+    } 
+
+    if (this.props.type === 'contact-btn') {
+      return (
+        <div>
+          <Contact />
+        </div>
+      );
+    } 
   }
 }
 

@@ -20,8 +20,7 @@ class App extends React.Component {
     this.clickHandler = this.clickHandler.bind(this);
   }
 
-  clickHandler (e) {
-    console.log(e.target.id);
+  clickHandler(e) {
     this.setState({
       content: e.target.id
     });
@@ -36,8 +35,38 @@ class App extends React.Component {
         </div>
 
         <nav>
-          <button onClick={this.clickHandler} className="nav-btn" id='profile-btn'>About Me</button>
-          <button onClick={this.clickHandler} className="nav-btn" id='project-btn'>Previous Work</button>
+          <button
+            type="button"
+            onClick={this.clickHandler}
+            className="nav-btn"
+            id="profile-btn"
+          >
+            About Me
+          </button>
+          <button
+            type="button"
+            onClick={this.clickHandler}
+            className="nav-btn"
+            id="project-btn"
+          >
+            Previous Work
+          </button>
+          <button
+            type="button"
+            onClick={this.clickHandler}
+            className="nav-btn"
+            id="skills-btn"
+          >
+            Skills
+          </button>
+          <button
+            type="button"
+            onClick={this.clickHandler}
+            className="nav-btn"
+            id="contact-btn"
+          >
+            Contact
+          </button>
         </nav>
 
         <div className="content">
