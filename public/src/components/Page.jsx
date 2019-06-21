@@ -14,7 +14,7 @@ class Page extends React.Component {
   render() {
     if (this.props.type === 'profile-btn') {
       return (
-        <div>
+        <div className='test'>
           <Profile />
         </div>
       );
@@ -25,23 +25,21 @@ class Page extends React.Component {
           <Projects />
         </div>
       );
-    } 
-    
+    }
     if (this.props.type === 'skills-btn') {
       return (
         <div>
           <Skills />
         </div>
       );
-    } 
-
+    }
     if (this.props.type === 'contact-btn') {
       return (
         <div>
           <Contact />
         </div>
       );
-    } 
+    }
   }
 }
 

@@ -1,0 +1,16 @@
+.hero {
+  height: 50%;
+}
+
+.page {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
