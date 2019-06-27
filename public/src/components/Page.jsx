@@ -16,28 +16,20 @@ class Page extends React.Component {
   render() {
     if (this.props.type === 'project-btn') {
       return (
-        <div>
           <Projects />
-        </div>
       );
     // eslint-disable-next-line no-else-return
     } else if (this.props.type === 'skills-btn') {
       return (
-        <div>
           <Skills />
-        </div>
       );
     } else if (this.props.type === 'contact-btn') {
       return (
-        <div>
           <Contact />
-        </div>
       );
     } else {
       return (
-        <div className="test">
-          <Profile />
-        </div>
+        <Profile />
       );
     }
   }

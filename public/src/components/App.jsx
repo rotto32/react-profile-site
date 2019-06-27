@@ -1,5 +1,6 @@
 import React from 'react';
 import Page from './Page.jsx';
+import Footer from './Footer.jsx';
 
 
 class App extends React.Component {
@@ -25,6 +26,7 @@ class App extends React.Component {
       <div className="all-content">
         <div className="hero">
           <h1>Rachael Otto</h1>
+          <img src='./shining.png' className='shining'></img>
           <h3>Full Stack Software Engineer</h3>
         </div>
         <div className="page">
@@ -64,6 +66,8 @@ class App extends React.Component {
           </nav>
           <Page type={this.state.content} />
         </div>
+        <Footer />
+
       </div>
     );
   }

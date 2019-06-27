@@ -11,6 +11,13 @@ class Skills extends React.Component {
     return (
       <div>
         <h3>Skills</h3>
+        <div>
+          <h4>My Favorite Technologies</h4>
+          <h5>Languages</h5>
+          <h5>Frameworks</h5>
+          <h5>Dev Ops</h5>
+          <h5>Miscellaneous</h5>
+        </div>
       </div>
     );
   }
