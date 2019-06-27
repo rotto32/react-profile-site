@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import Profile from './Profile.jsx';
 import Projects from './Projects.jsx';
 import Skills from './Skills.jsx';

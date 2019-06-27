@@ -25504,15 +25504,6 @@ var App = function (_React$Component) {
   _createClass(App, [{
     key: 'clickHandler',
     value: function clickHandler(e) {
-      e.preventDefault();
-      this.setState({
-        content: e.target.id
-      });
-      this.clickHandler = this.clickHandler.bind(this);
-    }
-  }, {
-    key: 'clickHandler',
-    value: function clickHandler(e) {
       this.setState({
         content: e.target.id
       });
@@ -25638,15 +25629,15 @@ var Contact = function (_React$Component) {
   }
 
   _createClass(Contact, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
+        'div',
         null,
         _react2.default.createElement(
-          "h3",
+          'h3',
           null,
-          "Contact"
+          'Contact'
         )
       );
     }
@@ -25859,15 +25850,15 @@ var Projects = function (_React$Component) {
   }
 
   _createClass(Projects, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
+        'div',
         null,
         _react2.default.createElement(
-          "h3",
+          'h3',
           null,
-          "Projects"
+          'Projects'
         )
       );
     }
@@ -25921,15 +25912,15 @@ var Skills = function (_React$Component) {
   }
 
   _createClass(Skills, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
+        'div',
         null,
         _react2.default.createElement(
-          "h3",
+          'h3',
           null,
-          "Skills"
+          'Skills'
         )
       );
     }
@@ -25970,7 +25961,7 @@ var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById("app"));
+_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('app'));
 
 /***/ })
 

@@ -13,27 +13,20 @@ class App extends React.Component {
     this.clickHandler = this.clickHandler.bind(this);
   }
 
-  clickHandler(e) {
-    e.preventDefault();
-    this.setState({
-      content: e.target.id,
-    });
-    this.clickHandler = this.clickHandler.bind(this);
-  }
 
   clickHandler(e) {
     this.setState({
-      content: e.target.id
+      content: e.target.id,
     });
   }
 
   render() {
     return (
       <div className="all-content">
-          <div className="hero">
-            <h1>Rachael Otto</h1>
-            <h3>Full Stack Software Engineer</h3>
-          </div>
+        <div className="hero">
+          <h1>Rachael Otto</h1>
+          <h3>Full Stack Software Engineer</h3>
+        </div>
         <div className="page">
           <nav>
             <button
