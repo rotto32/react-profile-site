@@ -94,8 +94,12 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+var urlEscape = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/url-escape.js */ "./node_modules/css-loader/dist/runtime/url-escape.js");
+var ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(/*! ./green-sky.jpg */ "./public/dist/green-sky.jpg"));
+
 // Module
-exports.push([module.i, ".hero {\n  height: 50%;\n}\n\n.page {\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n}\n\nnav {\n  display: flex;\n  flex-direction: column;\n  margin-right: 20px;\n}\n\n", ""]);
+exports.push([module.i, "\n/* font-family: 'Amatic SC', cursive;\nfont-family: 'Raleway', sans-serif; */\n\n/* Colors:\n   blue: rgba(25, 181, 254, 1)\n   yellow: rgba(254, 241, 96, 1)\n   light grey: rgba(232, 236, 241, 1)\n   blue grey: rgba(103, 128, 159, 1)\n\n*/\n\n* {\n  font-size: 16px;\n}\n\nhtml{\n  background-color: rgba(25, 181, 254, 1);\n}\n\nh1{\n  font-size: 4rem;\n}\n\nh2 {\n  font-size: 3.5rem;\n}\n\nh3{\n  font-size: 3rem;\n}\n\nh1, h2, h3 {\n  font-family: 'Amatic SC', cursive;\n}\n\nh4, h5, p {\n  font-family: 'Raleway', sans-serif;\n}\n\nnav{\n  width: 100%;\n  /* height: 100%; */\n  display: flex;\n  /* flex-direction: column; */\n  justify-content: center;\n  border-bottom: 2px solid rgba(103, 128, 159, 1);\n\n}\n\nnav button{\n  font-family: 'Raleway', sans-serif;\n  height: 30%;\n  border: none;\n  display: flex;\n  justify-content: flex-start;\n  background-color: rgba(25, 181, 254, 1);\n  border-right: 2px solid rgba(103, 128, 159, 1);\n\n}\n\nnav button:hover{\n  background-color: rgba(254, 241, 96, 1);\n}\n\nfooter{\n  position: fixed;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 50px;\n  background-color: rgba(254, 241, 96, 1);\n}\n\n\n\n/* *** CLASSES *** */\n\n.hero {\n  height: 50%;\n  display: flex;\n  margin: 20px;\n  padding: 10px;\n  justify-content: center;\n  align-items: center;\n  background-image: url(" + ___CSS_LOADER_URL___0___ + ");\n}\n\n.shining {\n  height: 50px;\n}\n\n.page {\n  margin: 20px;\n}\n\n/* ** IDs ** */\n\n#profile-btn {\n    border-left: 2px solid rgba(103, 128, 159, 1);\n\n}", ""]);
 
 
 
@@ -194,6 +198,37 @@ function toComment(sourceMap) {
   var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
   return '/*# ' + data + ' */';
 }
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/url-escape.js":
+/*!************************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/url-escape.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function escape(url, needQuotes) {
+  if (typeof url !== 'string') {
+    return url;
+  } // If url is already wrapped in quotes, remove them
+
+
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]/.test(url) || needQuotes) {
+    return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"';
+  }
+
+  return url;
+};
 
 /***/ }),
 
@@ -25423,6 +25458,17 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./public/dist/green-sky.jpg":
+/*!***********************************!*\
+  !*** ./public/dist/green-sky.jpg ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "2c7711dfca057301f380097475ed9733.jpg";
+
+/***/ }),
+
 /***/ "./public/dist/style.css":
 /*!*******************************!*\
   !*** ./public/dist/style.css ***!
@@ -25477,6 +25523,10 @@ var _Page = __webpack_require__(/*! ./Page.jsx */ "./public/src/components/Page.
 
 var _Page2 = _interopRequireDefault(_Page);
 
+var _Footer = __webpack_require__(/*! ./Footer.jsx */ "./public/src/components/Footer.jsx");
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25522,6 +25572,7 @@ var App = function (_React$Component) {
             null,
             'Rachael Otto'
           ),
+          _react2.default.createElement('img', { src: './shining.png', className: 'shining' }),
           _react2.default.createElement(
             'h3',
             null,
@@ -25529,54 +25580,55 @@ var App = function (_React$Component) {
           )
         ),
         _react2.default.createElement(
+          'nav',
+          null,
+          _react2.default.createElement(
+            'button',
+            {
+              type: 'button',
+              onClick: this.clickHandler,
+              className: 'nav-btn',
+              id: 'profile-btn'
+            },
+            'About Me'
+          ),
+          _react2.default.createElement(
+            'button',
+            {
+              type: 'button',
+              onClick: this.clickHandler,
+              className: 'nav-btn',
+              id: 'project-btn'
+            },
+            'Previous Work'
+          ),
+          _react2.default.createElement(
+            'button',
+            {
+              type: 'button',
+              onClick: this.clickHandler,
+              className: 'nav-btn',
+              id: 'skills-btn'
+            },
+            'Skills'
+          ),
+          _react2.default.createElement(
+            'button',
+            {
+              type: 'button',
+              onClick: this.clickHandler,
+              className: 'nav-btn',
+              id: 'contact-btn'
+            },
+            'Contact'
+          )
+        ),
+        _react2.default.createElement(
           'div',
           { className: 'page' },
-          _react2.default.createElement(
-            'nav',
-            null,
-            _react2.default.createElement(
-              'button',
-              {
-                type: 'button',
-                onClick: this.clickHandler,
-                className: 'nav-btn',
-                id: 'profile-btn'
-              },
-              'About Me'
-            ),
-            _react2.default.createElement(
-              'button',
-              {
-                type: 'button',
-                onClick: this.clickHandler,
-                className: 'nav-btn',
-                id: 'project-btn'
-              },
-              'Previous Work'
-            ),
-            _react2.default.createElement(
-              'button',
-              {
-                type: 'button',
-                onClick: this.clickHandler,
-                className: 'nav-btn',
-                id: 'skills-btn'
-              },
-              'Skills'
-            ),
-            _react2.default.createElement(
-              'button',
-              {
-                type: 'button',
-                onClick: this.clickHandler,
-                className: 'nav-btn',
-                id: 'contact-btn'
-              },
-              'Contact'
-            )
-          ),
           _react2.default.createElement(_Page2.default, { type: this.state.content })
-        )
+        ),
+        _react2.default.createElement(_Footer2.default, null)
       );
     }
   }]);
@@ -25629,15 +25681,15 @@ var Contact = function (_React$Component) {
   }
 
   _createClass(Contact, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        null,
+        "div",
+        { className: "tab" },
         _react2.default.createElement(
-          'h3',
+          "h3",
           null,
-          'Contact'
+          "Contact"
         )
       );
     }
@@ -25647,6 +25699,59 @@ var Contact = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Contact;
+
+/***/ }),
+
+/***/ "./public/src/components/Footer.jsx":
+/*!******************************************!*\
+  !*** ./public/src/components/Footer.jsx ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Footer(props) {
+  return _react2.default.createElement(
+    'footer',
+    null,
+    _react2.default.createElement(
+      'div',
+      { className: 'icon-attr' },
+      'Icons made by ',
+      _react2.default.createElement(
+        'a',
+        { href: 'https://www.freepik.com/?__hstc=57440181.248da1874e0dd39a942bbb1ee2c33de2.1561597842351.1561597842351.1561597842351.1&__hssc=57440181.6.1561597842352&__hsfp=3033705192', title: 'Freepik' },
+        'Freepik'
+      ),
+      ' from ',
+      _react2.default.createElement(
+        'a',
+        { href: 'https://www.flaticon.com/', title: 'Flaticon' },
+        'www.flaticon.com'
+      ),
+      ' is licensed by ',
+      _react2.default.createElement(
+        'a',
+        { href: 'http://creativecommons.org/licenses/by/3.0/', title: 'Creative Commons BY 3.0', target: '_blank' },
+        'CC 3.0 BY'
+      )
+    )
+  );
+};
+
+exports.default = Footer;
 
 /***/ }),
 
@@ -25710,30 +25815,14 @@ var Page = function (_React$Component) {
     key: 'render',
     value: function render() {
       if (this.props.type === 'project-btn') {
-        return _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement(_Projects2.default, null)
-        );
+        return _react2.default.createElement(_Projects2.default, null);
         // eslint-disable-next-line no-else-return
       } else if (this.props.type === 'skills-btn') {
-        return _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement(_Skills2.default, null)
-        );
+        return _react2.default.createElement(_Skills2.default, null);
       } else if (this.props.type === 'contact-btn') {
-        return _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement(_Contact2.default, null)
-        );
+        return _react2.default.createElement(_Contact2.default, null);
       } else {
-        return _react2.default.createElement(
-          'div',
-          { className: 'test' },
-          _react2.default.createElement(_Profile2.default, null)
-        );
+        return _react2.default.createElement(_Profile2.default, null);
       }
     }
   }]);
@@ -25790,7 +25879,7 @@ var Profile = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'tab' },
         _react2.default.createElement(
           'h3',
           null,
@@ -25848,15 +25937,15 @@ var Projects = function (_React$Component) {
   }
 
   _createClass(Projects, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        null,
+        "div",
+        { className: "tab" },
         _react2.default.createElement(
-          'h3',
+          "h3",
           null,
-          'Projects'
+          "Projects"
         )
       );
     }
@@ -25910,15 +25999,44 @@ var Skills = function (_React$Component) {
   }
 
   _createClass(Skills, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        null,
+        "div",
+        { className: "tab" },
         _react2.default.createElement(
-          'h3',
+          "h3",
           null,
-          'Skills'
+          "Skills"
+        ),
+        _react2.default.createElement(
+          "div",
+          null,
+          _react2.default.createElement(
+            "h4",
+            null,
+            "My Favorite Technologies"
+          ),
+          _react2.default.createElement(
+            "h5",
+            null,
+            "Languages"
+          ),
+          _react2.default.createElement(
+            "h5",
+            null,
+            "Frameworks"
+          ),
+          _react2.default.createElement(
+            "h5",
+            null,
+            "Dev Ops"
+          ),
+          _react2.default.createElement(
+            "h5",
+            null,
+            "Miscellaneous"
+          )
         )
       );
     }
