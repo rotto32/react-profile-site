@@ -12,6 +12,14 @@ font-family: 'Raleway', sans-serif; */
 
 */
 
+
+/*
+GRADIENT BLUE-YELLOW
+background-color: #09c7fb;
+background-image: linear-gradient(315deg, #09c7fb 0%, #93fb9d 74%);
+
+*/
+
 * {
   font-size: 16px;
   margin: 0px;
@@ -23,43 +31,49 @@ html{
 
 h1{
   font-size: 4rem;
+  margin: 40px 0px;
 }
 
 h2 {
   font-size: 3.5rem;
+  margin: 40px 0px;
 }
 
 h3{
   font-size: 3rem;
   color: rgba(103, 128, 159, 1);
   margin-left: 20px;
+  /* border-bottom: 2px solid rgba(103, 128, 159, 1); */
+
 }
 
 h1, h2, h3 {
   font-family: 'Amatic SC', cursive;
 }
 
-h4, h5, p {
+h4, h5, p, ul, li {
   font-family: 'Raleway', sans-serif;
   color: rgba(103, 128, 159, 1);
 }
 
 nav{
   width: 100%;
+  height: 40px;
   display: flex;
   justify-content: center;
   border-bottom: 2px solid rgba(103, 128, 159, 1);
   border-top: 2px solid rgba(103, 128, 159, 1);
+  background-color: #09c7fb;
+  background-image: linear-gradient(315deg, #09c7fb 0%, #93fb9d 74%);
 
 }
 
 nav button{
   font-family: 'Raleway', sans-serif;
-  height: 30%;
   border: none;
   display: flex;
   justify-content: flex-start;
-  background-color: rgba(20, 96, 84, 1);
+  background-color: #09c7fb;
   border-right: 2px solid rgba(103, 128, 159, 1);
 }
 
@@ -73,8 +87,10 @@ footer{
   left: 0px;
   width: 100%;
   height: 50px;
-  background-color: rgba(19, 90, 120, 1);
+  /* background-color: rgba(19, 90, 120, 1); */
   border-top: 2px solid rgba(103, 128, 159, 1);
+  background-color: #09c7fb;
+  background-image: linear-gradient(315deg, #09c7fb 0%, #93fb9d 74%);
 
 }
 
@@ -87,7 +103,7 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('./green-sky.jpg');
+  background-image: url('./imgs/green-sky.jpg');
   background-size: cover;
  
 }
@@ -99,12 +115,18 @@ footer{
 
 .page {
   background-color: black;
-  height: 700px;
+  height: 1000px;
 }
 
 .page-icon{
   margin-top: 20px;
   height: 75px;
+}
+
+.page-content{
+  display: flex;
+  margin-left: 20%;
+  flex-direction: column;
 }
 
 .nav-icon{

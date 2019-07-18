@@ -26,48 +26,52 @@ class App extends React.Component {
       <div className="all-content">
         <div className="hero">
           <h1>Rachael Otto</h1>
-          <img src='./shining.png' className='shining'></img>
-          <h3>Full Stack Software Engineer</h3>
+          <img src="./imgs/shining.png" className="shining" />
+          <h2>Full Stack Software Engineer</h2>
         </div>
+        <nav>
+          <button
+            type="button"
+            onClick={this.clickHandler}
+            className="nav-btn"
+            id="profile-btn"
+          >
+            <img src="./imgs/telescope-line.png" className="nav-icon" /> About
+            Me
+          </button>
+          <button
+            type="button"
+            onClick={this.clickHandler}
+            className="nav-btn"
+            id="project-btn"
+          >
+            <img src="./imgs/orbit-line.png" className="nav-icon" />
+            My Work
+          </button>
+          <button
+            type="button"
+            onClick={this.clickHandler}
+            className="nav-btn"
+            id="skills-btn"
+          >
+            <img src="./imgs/star-line.png" className="nav-icon" />
+            Skills
+          </button>
+          <button
+            type="button"
+            onClick={this.clickHandler}
+            className="nav-btn"
+            id="contact-btn"
+          >
+            <img src="./imgs/asteroid-line.png" className="nav-icon" />
+            Contact
+          </button>
+        </nav>
         <div className="page">
-          <nav>
-            <button
-              type="button"
-              onClick={this.clickHandler}
-              className="nav-btn"
-              id="profile-btn"
-            >
-              About Me
-            </button>
-            <button
-              type="button"
-              onClick={this.clickHandler}
-              className="nav-btn"
-              id="project-btn"
-            >
-              Previous Work
-            </button>
-            <button
-              type="button"
-              onClick={this.clickHandler}
-              className="nav-btn"
-              id="skills-btn"
-            >
-              Skills
-            </button>
-            <button
-              type="button"
-              onClick={this.clickHandler}
-              className="nav-btn"
-              id="contact-btn"
-            >
-              Contact
-            </button>
-          </nav>
           <Page type={this.state.content} />
         </div>
-        <Footer />
 
+        <Footer />
       </div>
     );
   }

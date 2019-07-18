@@ -9,8 +9,8 @@ class Projects extends React.Component {
 
   render() {
     return (
-      <div>
-        <h3>Projects</h3>
+      <div className="tab">
+        <h3> <img src="./imgs/orbit.png" className='page-icon' /> My Work</h3>
       </div>
     );
   }

@@ -9,8 +9,11 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <div>
-        <h3>Contact</h3>
+      <div className="tab">
+        <h3>
+          <img src="./imgs/asteroid.png" className="page-icon" />
+          Contact
+        </h3>
       </div>
     );
   }

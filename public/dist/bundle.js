@@ -96,10 +96,10 @@
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Imports
 var urlEscape = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/url-escape.js */ "./node_modules/css-loader/dist/runtime/url-escape.js");
-var ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(/*! ./green-sky.jpg */ "./public/dist/green-sky.jpg"));
+var ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(/*! ./imgs/green-sky.jpg */ "./public/dist/imgs/green-sky.jpg"));
 
 // Module
-exports.push([module.i, "\n/* font-family: 'Amatic SC', cursive;\nfont-family: 'Raleway', sans-serif; */\n\n/* Colors:\n   blue: rgba(25, 181, 254, 1)\n   sky blue: \trgba(19, 90, 120, 1);\n   yellow: rgba(254, 241, 96, 1)\n   light grey: rgba(232, 236, 241, 1)\n   blue grey: rgba(103, 128, 159, 1)\n   blue-green:rgba(20, 96, 84, 1);\n\n*/\n\n* {\n  font-size: 16px;\n  margin: 0px;\n}\n\nhtml{\n  background-color: rgba(19, 90, 120, 1);;\n}\n\nh1{\n  font-size: 4rem;\n}\n\nh2 {\n  font-size: 3.5rem;\n}\n\nh3{\n  font-size: 3rem;\n  color: rgba(103, 128, 159, 1);\n  margin-left: 20px;\n}\n\nh1, h2, h3 {\n  font-family: 'Amatic SC', cursive;\n}\n\nh4, h5, p {\n  font-family: 'Raleway', sans-serif;\n  color: rgba(103, 128, 159, 1);\n}\n\nnav{\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  border-bottom: 2px solid rgba(103, 128, 159, 1);\n  border-top: 2px solid rgba(103, 128, 159, 1);\n\n}\n\nnav button{\n  font-family: 'Raleway', sans-serif;\n  height: 30%;\n  border: none;\n  display: flex;\n  justify-content: flex-start;\n  background-color: rgba(20, 96, 84, 1);\n  border-right: 2px solid rgba(103, 128, 159, 1);\n}\n\nnav button:hover{\n  background-color: rgba(103, 128, 159, 1);\n}\n\nfooter{\n  position: fixed;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 50px;\n  background-color: rgba(19, 90, 120, 1);\n  border-top: 2px solid rgba(103, 128, 159, 1);\n\n}\n\n\n\n/* *** CLASSES *** */\n\n.hero {\n  height: 70%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-image: url(" + ___CSS_LOADER_URL___0___ + ");\n  background-size: cover;\n \n}\n\n\n.shining {\n  height: 50px;\n}\n\n.page {\n  background-color: black;\n  height: 700px;\n}\n\n.page-icon{\n  margin-top: 20px;\n  height: 75px;\n}\n\n.nav-icon{\n  height: 20px;\n  margin-right: 2px;\n}\n\n/* ** IDs ** */\n\n#profile-btn {\n    border-left: 2px solid rgba(103, 128, 159, 1);\n\n}", ""]);
+exports.push([module.i, "\n/* font-family: 'Amatic SC', cursive;\nfont-family: 'Raleway', sans-serif; */\n\n/* Colors:\n   blue: rgba(25, 181, 254, 1)\n   sky blue: \trgba(19, 90, 120, 1);\n   yellow: rgba(254, 241, 96, 1)\n   light grey: rgba(232, 236, 241, 1)\n   blue grey: rgba(103, 128, 159, 1)\n   blue-green:rgba(20, 96, 84, 1);\n\n*/\n\n\n/*\nGRADIENT BLUE-YELLOW\nbackground-color: #09c7fb;\nbackground-image: linear-gradient(315deg, #09c7fb 0%, #93fb9d 74%);\n\n*/\n\n* {\n  font-size: 16px;\n  margin: 0px;\n}\n\nhtml{\n  background-color: rgba(19, 90, 120, 1);;\n}\n\nh1{\n  font-size: 4rem;\n  margin: 40px 0px;\n}\n\nh2 {\n  font-size: 3.5rem;\n  margin: 40px 0px;\n}\n\nh3{\n  font-size: 3rem;\n  color: rgba(103, 128, 159, 1);\n  margin-left: 20px;\n  /* border-bottom: 2px solid rgba(103, 128, 159, 1); */\n\n}\n\nh1, h2, h3 {\n  font-family: 'Amatic SC', cursive;\n}\n\nh4, h5, p, ul, li {\n  font-family: 'Raleway', sans-serif;\n  color: rgba(103, 128, 159, 1);\n}\n\nnav{\n  width: 100%;\n  height: 40px;\n  display: flex;\n  justify-content: center;\n  border-bottom: 2px solid rgba(103, 128, 159, 1);\n  border-top: 2px solid rgba(103, 128, 159, 1);\n  background-color: #09c7fb;\n  background-image: linear-gradient(315deg, #09c7fb 0%, #93fb9d 74%);\n\n}\n\nnav button{\n  font-family: 'Raleway', sans-serif;\n  border: none;\n  display: flex;\n  justify-content: flex-start;\n  background-color: #09c7fb;\n  border-right: 2px solid rgba(103, 128, 159, 1);\n}\n\nnav button:hover{\n  background-color: rgba(103, 128, 159, 1);\n}\n\nfooter{\n  position: fixed;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 50px;\n  /* background-color: rgba(19, 90, 120, 1); */\n  border-top: 2px solid rgba(103, 128, 159, 1);\n  background-color: #09c7fb;\n  background-image: linear-gradient(315deg, #09c7fb 0%, #93fb9d 74%);\n\n}\n\n\n\n/* *** CLASSES *** */\n\n.hero {\n  height: 70%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-image: url(" + ___CSS_LOADER_URL___0___ + ");\n  background-size: cover;\n \n}\n\n\n.shining {\n  height: 50px;\n}\n\n.page {\n  background-color: black;\n  height: 1000px;\n}\n\n.page-icon{\n  margin-top: 20px;\n  height: 75px;\n}\n\n.page-content{\n  display: flex;\n  margin-left: 20%;\n  flex-direction: column;\n}\n\n.nav-icon{\n  height: 20px;\n  margin-right: 2px;\n}\n\n/* ** IDs ** */\n\n#profile-btn {\n    border-left: 2px solid rgba(103, 128, 159, 1);\n\n}", ""]);
 
 
 
@@ -25458,10 +25458,10 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./public/dist/green-sky.jpg":
-/*!***********************************!*\
-  !*** ./public/dist/green-sky.jpg ***!
-  \***********************************/
+/***/ "./public/dist/imgs/green-sky.jpg":
+/*!****************************************!*\
+  !*** ./public/dist/imgs/green-sky.jpg ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -25572,7 +25572,7 @@ var App = function (_React$Component) {
             null,
             'Rachael Otto'
           ),
-          _react2.default.createElement('img', { src: './shining.png', className: 'shining' }),
+          _react2.default.createElement('img', { src: './imgs/shining.png', className: 'shining' }),
           _react2.default.createElement(
             'h2',
             null,
@@ -25590,7 +25590,7 @@ var App = function (_React$Component) {
               className: 'nav-btn',
               id: 'profile-btn'
             },
-            _react2.default.createElement('img', { src: './telescope-line.png', className: 'nav-icon' }),
+            _react2.default.createElement('img', { src: './imgs/telescope-line.png', className: 'nav-icon' }),
             ' About Me'
           ),
           _react2.default.createElement(
@@ -25601,7 +25601,7 @@ var App = function (_React$Component) {
               className: 'nav-btn',
               id: 'project-btn'
             },
-            _react2.default.createElement('img', { src: './orbit-line.png', className: 'nav-icon' }),
+            _react2.default.createElement('img', { src: './imgs/orbit-line.png', className: 'nav-icon' }),
             'My Work'
           ),
           _react2.default.createElement(
@@ -25612,7 +25612,7 @@ var App = function (_React$Component) {
               className: 'nav-btn',
               id: 'skills-btn'
             },
-            _react2.default.createElement('img', { src: './star-line.png', className: 'nav-icon' }),
+            _react2.default.createElement('img', { src: './imgs/star-line.png', className: 'nav-icon' }),
             'Skills'
           ),
           _react2.default.createElement(
@@ -25623,7 +25623,7 @@ var App = function (_React$Component) {
               className: 'nav-btn',
               id: 'contact-btn'
             },
-            _react2.default.createElement('img', { src: './asteroid-line.png', className: 'nav-icon' }),
+            _react2.default.createElement('img', { src: './imgs/asteroid-line.png', className: 'nav-icon' }),
             'Contact'
           )
         ),
@@ -25693,7 +25693,7 @@ var Contact = function (_React$Component) {
         _react2.default.createElement(
           "h3",
           null,
-          _react2.default.createElement("img", { src: "./asteroid.png", className: "page-icon" }),
+          _react2.default.createElement("img", { src: "./imgs/asteroid.png", className: "page-icon" }),
           "Contact"
         )
       );
@@ -25888,8 +25888,22 @@ var Profile = function (_React$Component) {
         _react2.default.createElement(
           "h3",
           null,
-          _react2.default.createElement("img", { src: "./telescope.png", className: "page-icon" }),
+          _react2.default.createElement("img", { src: "./imgs/telescope.png", className: "page-icon" }),
           "About Me"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "page-content" },
+          _react2.default.createElement(
+            "h5",
+            null,
+            "Hi I'm Rachael"
+          ),
+          _react2.default.createElement(
+            "p",
+            null,
+            "I'm a full stack software engineer."
+          )
         )
       );
     }
@@ -25952,7 +25966,7 @@ var Projects = function (_React$Component) {
           "h3",
           null,
           " ",
-          _react2.default.createElement("img", { src: "./orbit.png", className: "page-icon" }),
+          _react2.default.createElement("img", { src: "./imgs/orbit.png", className: "page-icon" }),
           " My Work"
         )
       );
@@ -26015,21 +26029,25 @@ var Skills = function (_React$Component) {
         _react2.default.createElement(
           "h3",
           null,
-          _react2.default.createElement("img", { src: "./star.png", className: "page-icon" }),
+          _react2.default.createElement("img", { src: "./imgs/star.png", className: "page-icon" }),
           "Skills"
         ),
         _react2.default.createElement(
           "div",
-          null,
-          _react2.default.createElement(
-            "h4",
-            null,
-            "My Favorite Technologies"
-          ),
+          { className: "page-content" },
           _react2.default.createElement(
             "h5",
             null,
             "Languages"
+          ),
+          _react2.default.createElement(
+            "ul",
+            null,
+            _react2.default.createElement(
+              "li",
+              null,
+              "JavaScript (ES6+)"
+            )
           ),
           _react2.default.createElement(
             "h5",
@@ -26037,14 +26055,60 @@ var Skills = function (_React$Component) {
             "Frameworks"
           ),
           _react2.default.createElement(
+            "ul",
+            null,
+            _react2.default.createElement(
+              "li",
+              null,
+              "React/Redux"
+            )
+          ),
+          _react2.default.createElement(
             "h5",
             null,
             "Dev Ops"
           ),
           _react2.default.createElement(
+            "ul",
+            null,
+            _react2.default.createElement(
+              "li",
+              null,
+              "Docker"
+            )
+          ),
+          _react2.default.createElement(
+            "h5",
+            null,
+            "Databases"
+          ),
+          _react2.default.createElement(
+            "ul",
+            null,
+            _react2.default.createElement(
+              "li",
+              null,
+              "MySQL"
+            ),
+            _react2.default.createElement(
+              "li",
+              null,
+              "MongoDB"
+            )
+          ),
+          _react2.default.createElement(
             "h5",
             null,
             "Miscellaneous"
+          ),
+          _react2.default.createElement(
+            "ul",
+            null,
+            _react2.default.createElement(
+              "li",
+              null,
+              "Git"
+            )
           )
         )
       );
